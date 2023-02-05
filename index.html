@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog:🏀basketball</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="navbar_logo">🏀BASKETBALL</a>
+
+            <ul class="navbar_item">
+                <li class="navbar_items navbar_items--logo">
+                    <img src="./assets/basketball_ball.jpg" alt="..." class="navbar_imge">
+                    <a href="#" class="navbar_logo navbar_logo--menu">🏀BASKETBALL</a>
+                </li>
+                <li class="navbar_items">
+                    <a href="#" class="navbar_links">Inicio</a>
+                </li>
+                <li class="navbar_items">
+                    <a href="#" class="navbar_links">Selection One</a>
+                    <i class="fa-solid fa-caret-right"></i>
+                </li>
+                <li class="navbar_items">
+                    <a href="#" class="navbar_links">Selection Two</a>
+                    <i class="fa-solid fa-caret-right"></i>
+                </li>
+                <li class="navbar_items">
+                    <a href="#" class="navbar_links">About</a>
+                </li>
+            </ul>
+
+            <div class="navbar__groupBTN" id="showMenu">
+                <i class="fa-solid fa-bars fa-lg navbar_menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section class="menu container">
+        <div class="menu__items">
+            Estadisticas
+            <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <div class="menu__items" id="liveGamesForWorld">
+            Live!
+            <i class="fa-solid fa-basketball"></i>
+        </div>
+        <div class="menu__items">
+            Posiciones
+            <i class="fa-solid fa-table"></i>
+        </div>
+        <div class="menu__items">
+            Added
+            <i class="fa-solid fa-plus"></i>
+        </div>
+    </section>
+
+    <main id="root" class="root"></main>
+
+
+
+
+
+
+
+
+
+
+
+
+    <template id="heroTemplate">
+        <section class="hero">
+            <picture class="hero__container">
+                <img src="./assets/basketball_ball.jpg" width="100%" alt="..." class="hero__image">
+            </picture>
+            <div class="hero__content">
+                <h1 class="hero__title">Lorem ipsum dolor sit amet.</h1>
+                <p class="hero__paragraph">Lorem ipsum dolor sit amet consectetur.</p>
+                <a href="#" class="cta cta__hero">LEEAR MORE! <i class="fa-solid fa-angles-right"></i></a>
+            </div>
+        </section>
+
+        <section class="panel">
+            <button class="btn btn__hero"><</button>
+            <button class="btn btn__hero">></button>
+        </section>
+
+        <section class="news">
+
+            <div class="news__filters">
+                <form class="filters">
+
+                    <div class="filters__header">
+                        <h3>Filtros</h3>
+
+                        <i class="fa-solid fa-filter"></i>
+                    </div>
+
+                    <label>Rango:</label>
+                    <input type="range" name="rangeInput" />
+
+                    <select name="selectInput" id="">
+                        <option value="1">Mayor a Menor</option>
+                        <option value="2">Menor a Mayor</option>
+                        <option value="3">Mas Relevantes</option>
+                        <option value="4">Mas Famosas</option>
+                    </select>
+                    <button type="submit" class="btn btn__form">
+                        Aplicar Filtros
+                    </button>
+                </form>
+
+                <div class="ancle">
+                    <h4 class="ancles__title">Enlaces</h4>
+                    <a href="#" class="ancles">linkOne</a>
+                    <a href="#" class="ancles">linkTwo</a>
+                    <a href="#" class="ancles">linkTrhee</a>
+                    <a href="#" class="ancles">linkFour</a>
+                    <a href="#" class="ancles">linkFive</a>
+                    <a href="#" class="ancles">linkSix</a>
+                    <a href="#" class="ancles">linkSeven</a>
+                    <a href="#" class="ancles">linkEight</a>
+                </div>
+            </div>
+
+            <div class="card__news">
+                <div class="card__header">
+                    <h2>Newslleters</h2>
+                </div>
+                <div class="card__body">
+                    <div class="card__wrapper">
+                        
+                        <img src="./assets/basketball_three.jpg" width="100%" alt="..." class="card__imge">
+                        
+                        <h3 class="card__title">Lorem ipsum dolor sit amet.</h3>
+                        <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere omnis numquam ullam quibusdam quo? Repellat iure deleniti inventore porro, vel molestias similique</p><br>
+                        
+                        <h3 class="card__title">Lorem ipsum dolor sit amet.</h3>
+                        <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere omnis numquam ullam quibusdam quo? Repellat iure deleniti inventore porro, vel molestias similique Repellat iure deleniti inventore porro, vel molestias similique Repellat iure deleniti inventore porro, vel molestias similiqueRepellat iure deleniti inventore porro, vel molestias similiqueRepellat iure deleniti inventore porro, vel molestias similique Repellat iure deleniti inventore porro, vel molestias similique</p><br>
+                        
+                        <img src="./assets/oleksii-s-O2kqxbix4Mw-unsplash.jpg" width="100%" height="200px" style="object-fit: contain;" alt="">
+                        <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere omnis numquam ullam quibusdam quo? Repellat iure deleniti inventore porro, vel molestias similique</p>
+                    
+                    </div>
+                </div>
+                <div class="card__footer">
+                    <div class="card__like" data-after="3MG">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news__sildevar">
+                <div class="sliders">
+
+                    <img src="./assets/basketball_two.jpg" alt="" class="sildevar__img">
+
+                    <h3 class="slider__title">Lorem, ipsum dolor.</h3>
+                    <p class="slider__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, minima.</p>
+
+                    <a href="#" class="cta cta__sliders">Visitar</a>
+                </div>
+
+                <div class="sliders">
+
+                    <img src="./assets/papel.jpg" alt="" class="sildevar__img">
+
+                    <h3 class="slider__title">Lorem, ipsum dolor.</h3>
+                    <p class="slider__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, minima.</p>
+
+                    <a href="#" class="cta cta__sliders">Visitar</a>
+                </div>
+            </div>
+
+        </section>
+
+    </template>
+
+    <script src="./index.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+.navbar .container{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem .0rem;
+    padding-bottom: 1rem ;
+    border-bottom: .1rem solid wheat;
+}
+
+.navbar_logo{
+    color: wheat;
+    font-weight: bold;
+    text-decoration: none;
+    height: min-content;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.navbar_logo::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: .2rem;
+    left: 0; right: 0;
+    background-color: #fff;
+}
+
+
+.navbar_item{
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.950);
+    width: 80%;
+    padding-left: 1rem;
+    transform: translate(-100%);
+    transition: transform 1s ease; 
+}
+
+.navbar_item.showMenuItem {
+    transform: translate(0);
+}
+
+.navbar_items--logo{
+    display: block;
+    padding: 5rem 0 .7rem 0;
+    background-color: #fff;
+    position: relative;
+}
+
+.navbar_imge{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar_logo--menu{
+    color: wheat;
+    display: block;
+}
+
+.navbar_logo--menu::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    left: 0; right: 0;
+    background-color: #fff;
+}
+
+.navbar_items{
+    color: wheat;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.navbar__groupBTN{
+    display: grid;
+    place-items: center;
+    padding-right: 1rem;
+}
+
+.navbar_menu{
+    position: relative;
+    color: #fff;
+}
+
+.invalid{
+    display: block;
+    opacity: 0;
+}
+
+.valid{
+    opacity: 1;
+}
+
+.navbar_items:hover .fa-caret-right{
+    transition: transform .5s;
+    transform: rotate(90deg);
+}
+
+.navbar_links{
+    color: wheat;
+    text-decoration: none;
+}
+
+@media (min-width:1024px) {    
+
+    .navbar__groupBTN{
+        display: none;
+    }
+
+    .navbar_item{
+        position: initial;
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgba(0, 0, 0, 0.950);
+        width: 50%;
+        padding-left: 0;
+        transform: translate(0%);
+        transition: transform 1s ease;
+        font-size: .9rem;
+    }
+
+    .navbar_items{
+        padding: 1rem;
+    }
+
+    .navbar_items:hover{
+        background-color: #fff;
+    }
+
+    .navbar_items--logo {
+        display: none;
+    }
+}
