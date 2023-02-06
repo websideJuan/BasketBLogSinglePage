@@ -1,14 +1,36 @@
+import { nameFunction } from "./fetchData.js"
+
+const liveGamesCards = document.getElementById('liveGamesCards').content
+const fragment = document.createDocumentFragment()
 const liveGamesForWorld = document.getElementById('live')
 
-export const gamesLive = (props) => {
+
+export const gamesLive = async (props) => {
+    props.classList.add('liveHero__wrapper')
     liveGamesForWorld.classList.add('activateMenu__items')
 
-    let partidosLive = `
-    <main class="liveHero">
-        <h1 class="liveHero__title">Partidos en vivo</h1>
+    props.innerHTML = ''
+    const result = await nameFunction()
+
+    console.log(result)
+    const {result:{resultList}} = result
 
 
-    </main>`
+    console.log(resultList)
+    resultList.forEach(gamesLiveCard => {
 
-    props.innerHTML = partidosLive
+        console.log(gamesLiveCard)
+
+        liveGamesCards.querySelector('.liveHero__img').setAttribute('src', gamesLiveCard.item.image)
+        liveGamesCards.querySelector('.liveHero__points').innerHTML= gamesLiveCard.item.sku.def.price
+        liveGamesCards.querySelector('.liveHero__team').textContent = gamesLiveCard.item.title
+        liveGamesCards.querySelector('.cta__product').dataset.id = gamesLiveCard.item.itemId
+        
+
+        const clone = liveGamesCards.cloneNode(true)
+
+        fragment.appendChild(clone)
+    });
+
+    props.appendChild(fragment)
 }

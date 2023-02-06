@@ -1,12 +1,45 @@
-.liveHero{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 3rem;
-    text-align: center;
-    border-top: .1rem solid wheat;
+.liveHero__wrapper{
+    display: grid;
+    grid-template-columns:  repeat( auto-fit, minmax(250px, 1fr) );
+    width: 90%;
+    margin: 50px auto;
+    grid-auto-flow: row;
+    gap: 3rem;
+}
+
+.liveHero__card{
     border-bottom: .1rem solid wheat;
+    border-top: .1rem solid wheat;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;   
+    gap: .5rem;
+    border-radius: .4rem;
+    overflow: hidden;
+}
+
+.liveHero__img{
+    width: 100%;
+    max-width: 150px;
+    margin: auto;
+    height: auto;
+}
+
+.liveHero__banner{
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #000;
+}
+
+.liveHero__team{
+    background-color: #000;
+    text-align: center;
+    padding: 1rem 0;
+    word-wrap: wrap;
+    font-size: .5rem;
 }
 
 .liveHero__title{
@@ -15,4 +48,50 @@
     border-bottom: .1rem solid wheat;
     border-radius: .4rem;
     padding: 0 .5rem;
+}
+
+.liveHero__points{
+    color: #fff;
+}
+
+.cta__product{
+    transform: scale(.95);
+    cursor: pointer;
+    border-radius: .4rem;
+    padding: 1rem;
+    background-color: #000;
+    color: white;
+    border: none !important;
+    position: relative;
+}
+
+.cta__product::after{
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+
+.cta__product:hover{
+    background-color: #fff;
+    color: black;
+    text-decoration: underline;
+}
+
+.animationCar {
+    animation: animationForCar 1s linear  both;
+}
+
+@keyframes animationForCar {
+    0%{
+        font-size: .7rem;
+    }50%{
+        font-size: 1rem;
+    }100%{
+        font-size: 1.6rem;
+    }
 }
