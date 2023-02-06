@@ -4,7 +4,7 @@ const heroTemplate = document.getElementById('heroTemplate').content
 
 export function renderPageOne() {
     let stringName = {
-        titleCard:'BASKETBALL COMO UNA PASION!',
+        titleCard:'!BASKETBALL COMO UNA PASION!',
         descriptionCard:'EL mejor Basket del Mundo Y una buena Difucion!',
         count: 1
     }

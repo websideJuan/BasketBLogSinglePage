@@ -7,6 +7,12 @@
     <title>Blog:🏀basketball</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Rubik:wght@500;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <nav class="navbar">
@@ -22,7 +28,7 @@
                     <a href="#" class="navbar_links">Inicio</a>
                 </li>
                 <li class="navbar_items">
-                    <a href="#" class="navbar_links">Selection One</a>
+                    <a href="#" class="navbar_links" >Selection One</a>
                     <i class="fa-solid fa-caret-right"></i>
                 </li>
                 <li class="navbar_items">
@@ -33,7 +39,7 @@
                     <a href="#" class="navbar_links">About</a>
                 </li>
             </ul>
-
+            
             <div class="navbar__groupBTN" id="showMenu">
                 <i class="fa-solid fa-bars fa-lg navbar_menu"></i>
             </div>
@@ -45,20 +51,21 @@
             Estadisticas
             <i class="fa-solid fa-chart-line"></i>
         </div>
-        <div class="menu__items" id="liveGamesForWorld">
+        <div class="menu__items " data-click="live" id="live">
             Live!
             <i class="fa-solid fa-basketball"></i>
         </div>
-        <div class="menu__items">
+        <div class="menu__items" data-click="posiciones">
             Posiciones
             <i class="fa-solid fa-table"></i>
         </div>
-        <div class="menu__items">
+        <div class="menu__items" data-click="abouts">
             Added
             <i class="fa-solid fa-plus"></i>
         </div>
     </section>
 
+    
     <main id="root" class="root"></main>
 
 
@@ -72,7 +79,7 @@
 
 
 
-    <template id="heroTemplate">
+    <template id="heroTemplate">    
         <section class="hero">
             <picture class="hero__container">
                 <img src="./assets/basketball_ball.jpg" width="100%" alt="..." class="hero__image">
@@ -92,6 +99,22 @@
         <section class="news">
 
             <div class="news__filters">
+
+                <form class="find">
+                    <div class="find__header">
+                        <label class="find__title">Buscador!</label>
+                    </div>
+                    <div class="group__input">
+                        <input type="search" name="findInput" id="inputFind" placeholder="Que necesitas?" class="find__search">
+                        <button class="btn btn__find" type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+
+                    <div class="finded"></div>
+                </form>
+
+
                 <form class="filters">
 
                     <div class="filters__header">
@@ -127,7 +150,7 @@
                 </div>
             </div>
 
-            <div class="card__news">
+            <div class="card__news" >
                 <div class="card__header">
                     <h2>Newslleters</h2>
                 </div>
@@ -154,7 +177,7 @@
                 </div>
             </div>
 
-            <div class="news__sildevar">
+            <div class="news__sildevar" style="margin-top: 10rem;">
                 <div class="sliders">
 
                     <img src="./assets/basketball_two.jpg" alt="" class="sildevar__img">
@@ -174,11 +197,79 @@
 
                     <a href="#" class="cta cta__sliders">Visitar</a>
                 </div>
+
+                <div class="sliders">
+
+                    <img src="./assets/basketball_two.jpg" alt="" class="sildevar__img">
+
+                    <h3 class="slider__title">Lorem, ipsum dolor.</h3>
+                    <p class="slider__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, minima.</p>
+
+                    <a href="#" class="cta cta__sliders">Visitar</a>
+                </div>
             </div>
 
+            <div class="card__news"  style="margin-top: 15rem;">
+                <!-- <div class="card__header">
+                    <h2>Newslleters</h2>
+                </div> -->
+                <div class="card__body">
+                    <div class="card__wrapper">
+                        
+                        <img src="./assets/basketball_three.jpg" width="100%" alt="..." class="card__imge">
+                        
+                        <h3 class="card__title">Lorem ipsum dolor sit amet.</h3>
+                        <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere omnis numquam ullam quibusdam quo? Repellat iure deleniti inventore porro, vel molestias similique</p><br>
+                    
+                        <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere omnis numquam ullam quibusdam quo? Repellat iure deleniti inventore porro, vel molestias similique Repellat iure deleniti inventore porro, vel molestias similique Repellat iure deleniti inventore porro, vel molestias similiqueRepellat iure deleniti inventore porro, vel molestias similiqueRepellat iure deleniti inventore porro, vel molestias similique Repellat iure deleniti inventore porro, vel molestias similique</p><br>
+                        
+                        <!-- <img src="./assets/oleksii-s-O2kqxbix4Mw-unsplash.jpg" width="100%" height="200px" style="object-fit: contain;" alt="">
+                        <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere omnis numquam ullam quibusdam quo? Repellat iure deleniti inventore porro, vel molestias similique</p>
+                     -->
+                    </div>
+                </div>
+                <div class="card__footer">
+                    <div class="card__like" data-after="3MG">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news__sildevar" style="margin-top: 10rem;">
+                <div class="sliders">
+
+                    <img src="./assets/basketball_two.jpg" alt="" class="sildevar__img">
+
+                    <h3 class="slider__title">Lorem, ipsum dolor.</h3>
+                    <p class="slider__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, minima.</p>
+
+                    <a href="#" class="cta cta__sliders">Visitar</a>
+                </div>
+
+                <div class="sliders">
+
+                    <img src="./assets/papel.jpg" alt="" class="sildevar__img">
+
+                    <h3 class="slider__title">Lorem, ipsum dolor.</h3>
+                    <p class="slider__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, minima.</p>
+
+                    <a href="#" class="cta cta__sliders">Visitar</a>
+                </div>
+
+                <div class="sliders">
+
+                    <img src="./assets/basketball_two.jpg" alt="" class="sildevar__img">
+
+                    <h3 class="slider__title">Lorem, ipsum dolor.</h3>
+                    <p class="slider__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, minima.</p>
+
+                    <a href="#" class="cta cta__sliders">Visitar</a>
+                </div>
+            </div>
         </section>
 
     </template>
+
 
     <script src="./index.js" type="module"></script>
 </body>

@@ -5,9 +5,14 @@ import { gamesLive } from "./components/gamesLive.js"
 
 
 
-
 document.addEventListener('DOMContentLoaded', () => {
     renderPageOne()
     menuShowF()
-    gamesLive(root)
+})
+
+
+document.addEventListener('click', (e) => {
+    if(e.target.dataset.click === 'live'){
+        gamesLive(root)
+    }
 })

@@ -2,6 +2,7 @@
 @import url("./css/root.css");
 @import url("./css/menu.css");
 @import url("./css/cards.css");
+@import url("./css/livePage.css");
 
 *,
 ::after,
@@ -11,6 +12,14 @@
     padding: 0;
 }
 
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Rubik', sans-serif;
+}
+
+p,a{
+    font-family: 'Roboto Mono', monospace;
+}
+    
 body{
     background-attachment: fixed;
     background-color: #000000;
@@ -31,7 +40,7 @@ body{
 }
 
 .btn{
-    outline: .09rem solid wheat;
-    color: white;
+    outline: .09rem solid rgba(245, 222, 179, 0.504);
+    color: rgba(255, 255, 255, 0.53);
     background-color: transparent;
 }
