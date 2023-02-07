@@ -1,11 +1,8 @@
 .navbar .container{
-    background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem .0rem;
-    padding-bottom: 1rem ;
-    border-bottom: .1rem solid wheat;
+
 }
 
 .navbar_logo{
@@ -37,7 +34,6 @@
     list-style: none;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: rgba(0, 0, 0, 0.950);
     width: 80%;
     padding-left: 1rem;
     transform: translate(-100%);
@@ -121,22 +117,31 @@
         display: none;
     }
 
+    .navbar{
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
     .navbar_item{
         position: initial;
         display: flex;
         list-style: none;
         flex-direction: row;
-        justify-content: space-between;
-        background-color: rgba(0, 0, 0, 0.950);
-        width: 50%;
+        justify-content: flex-end;
+        align-items: center;
+        /* width: 50%; */
         padding-left: 0;
         transform: translate(0%);
         transition: transform 1s ease;
         font-size: .9rem;
+        gap: 2rem;
     }
 
     .navbar_items{
-        padding: 1rem;
+        padding: .5rem;
     }
 
     .navbar_items:hover{

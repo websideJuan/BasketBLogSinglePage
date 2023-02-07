@@ -15,6 +15,24 @@
 
 </head>
 <body>
+    <section class="menu container">
+        <div class="menu__items">
+            Estadisticas
+            <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <div class="menu__items " data-click="live" id="live">
+            Live!
+            <i class="fa-solid fa-basketball"></i>
+        </div>
+        <div class="menu__items" data-click="posiciones">
+            Posiciones
+            <i class="fa-solid fa-table"></i>
+        </div>
+        <div class="menu__items" data-click="abouts">
+            Added
+            <i class="fa-solid fa-plus"></i>
+        </div>
+    </section>
     <nav class="navbar">
         <div class="container">
             <a href="#" class="navbar_logo">🏀BASKETBALL</a>
@@ -46,28 +64,10 @@
         </div>
     </nav>
 
-    <section class="menu container">
-        <div class="menu__items">
-            Estadisticas
-            <i class="fa-solid fa-chart-line"></i>
-        </div>
-        <div class="menu__items " data-click="live" id="live">
-            Live!
-            <i class="fa-solid fa-basketball"></i>
-        </div>
-        <div class="menu__items" data-click="posiciones">
-            Posiciones
-            <i class="fa-solid fa-table"></i>
-        </div>
-        <div class="menu__items" data-click="abouts">
-            Added
-            <i class="fa-solid fa-plus"></i>
-        </div>
-    </section>
-
+    
     
     <main id="root" class="root"></main>
-
+    
 
 
 
@@ -80,10 +80,8 @@
     
     <template id="liveGamesCards">
         <!-- <h1 class="liveHero__title">Partidos en vivo</h1> -->
-        <!-- <main class="liveHero"> -->
-            
+        <!-- <main class="liveHero"> -->      
             <div class="liveHero__content">
-
                 <div class="liveHero__card">
                     <div class="liveHero__banner">
                         Price: <p class="liveHero__points">Away Score</p>

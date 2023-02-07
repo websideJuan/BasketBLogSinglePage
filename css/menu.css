@@ -1,12 +1,6 @@
 .menu{
-    margin: 0rem 0 .0rem 0;
-    border-radius: .4rem;
-
     display: flex;
-    right: 8%;
-
-    position: absolute;
-    z-index: 3;
+    width: 100%;
 }
 
 .menu__items{
@@ -33,23 +27,6 @@
     background-color: black;
     color: white;
 }
-
-.menu__items:nth-child(1) i{
-    color: white;
-}
-
-.menu__items:nth-child(2) i{
-    color: orangered;
-}
-
-.menu__items:nth-child(3) i{
-    color: greenyellow;
-}
-
-.menu__items:nth-child(4) i{
-    color: white;
-}
-
 
 @media (min-width:1024px) {
     .menu__items{
